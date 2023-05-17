@@ -10,13 +10,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <VBox alignment="CENTER" prefHeight="550.0" prefWidth="691.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proj_nevera.HelloController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-   <TabPane prefHeight="245.0" prefWidth="412.0" style="-fx-background-color: #CD5C5C;" tabClosingPolicy="UNAVAILABLE">
+   <TabPane prefHeight="290.0" prefWidth="651.0" style="-fx-background-color: #CD5C5C;" tabClosingPolicy="UNAVAILABLE">
      <tabs>
        <Tab text="Entrada de Producte">
          <content>
@@ -50,9 +51,29 @@
                      <Text layoutX="269.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descripció" wrappingWidth="72.38309669494629" />
                      <Text layoutX="269.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data" wrappingWidth="59.58310890197754" />
                      <Line endX="-100.19999694824219" endY="-55.00001907348633" layoutX="347.0" layoutY="59.0" startX="-100.19999694824219" startY="132.1999969482422" />
-                     <Button layoutX="554.0" layoutY="65.0" mnemonicParsing="false" text="CERCA " textFill="#850c69" />
-                     <Button layoutX="93.0" layoutY="146.0" mnemonicParsing="false" text="TREU" />
-                     <TextField layoutX="32.0" layoutY="21.0" prefHeight="110.0" prefWidth="142.0" style="-fx-background-color: yellow;" />
+                     <Button layoutX="554.0" layoutY="65.0" mnemonicParsing="false" onAction="#btCerca" text="CERCA " textFill="#850c69" />
+                     <Button layoutX="98.0" layoutY="146.0" mnemonicParsing="false" onAction="#btTreu" text="TREU" />
+                     <TextField layoutX="32.0" layoutY="21.0" prefHeight="110.0" prefWidth="180.0" style="-fx-background-color: yellow;" />
+                     <Button layoutX="32.0" layoutY="202.0" mnemonicParsing="false" onAction="#btTreu" prefHeight="25.0" prefWidth="35.0" text="&lt;&lt;">
+                        <font>
+                           <Font size="10.0" />
+                        </font>
+                     </Button>
+                     <Button layoutX="78.0" layoutY="202.0" mnemonicParsing="false" onAction="#btTreu" prefHeight="25.0" prefWidth="35.0" text="&lt;">
+                        <font>
+                           <Font size="10.0" />
+                        </font>
+                     </Button>
+                     <Button layoutX="126.0" layoutY="201.0" mnemonicParsing="false" onAction="#btTreu" prefHeight="25.0" prefWidth="35.0" text="&gt;">
+                        <font>
+                           <Font size="10.0" />
+                        </font>
+                     </Button>
+                     <Button layoutX="177.0" layoutY="202.0" mnemonicParsing="false" onAction="#btTreu" prefHeight="25.0" prefWidth="35.0" text="&gt;&gt;">
+                        <font>
+                           <Font size="10.0" />
+                        </font>
+                     </Button>
                   </children>
                </AnchorPane>
          </content>
