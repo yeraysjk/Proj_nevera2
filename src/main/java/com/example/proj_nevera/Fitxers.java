@@ -1,8 +1,12 @@
 package com.example.proj_nevera;
 
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Fitxers {
@@ -67,5 +71,39 @@ public class Fitxers {
 
     public void mostraFitxerText(String fitxer) throws IOException {
         System.out.println(this.retornaFitxerText(fitxer));
+    }
+    public void escriuObjecteFitxer(Object obj, String arxiu,boolean afegir)throws IOException{
+
+        if(!afegir || !existeix(arxiu)){
+            ObjectOutputStream out=new ObjectOutputStream(new FileOutputStream(arxiu,afegir));
+            out.writeObject(obj);
+        }else{
+            MeuObjecteOutputStream out2 =new MeuObjecteOutputStream(new FileOutputStream(arxiu,afegir));
+            out2.writeObject(obj);
+        }
+    }
+
+    public List<Object> retornaFitxerObjecteEnLlista(String fitxer)throws  ClassNotFoundException{
+        List<Object> LObjs =new ArrayList<>();
+        try{
+            ObjectInputStream in=new ObjectInputStream(
+                    new FileInputStream(fitxer));
+            do{
+                Object obj=in.readObject();
+                LObjs.add(obj);
+            }while (in!=null);
+            in.close();
+            in=null;
+        }catch (IOException e){
+//...
+        }
+        return  LObjs;
+    }
+
+    public boolean existeix(String ruta) {
+        // Comprova la existència d'un directori o un fitxer
+        Path fitxer = Paths.get(ruta);         // Path --> import java.nio.file.Path;
+        // Paths --> import java.nio.file.Paths
+        return Files.exists(fitxer);    // Files --> import java.nio.file.Files
     }
 }

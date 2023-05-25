@@ -3,29 +3,33 @@ package com.example.proj_nevera;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.Date;
 import java.util.Scanner;
 
-import static com.example.proj_nevera.Funcions_nevera.scan;
 
 public class Producte {
-    Fitxers f = new Fitxers();
+    static Fitxers f = new Fitxers();
+    static private String fitxerCsv = "productes.csv";
+    static private String arxiu="nevera.dat";
 
-    private String fitxer = "C:\\Users\retil\\IdeaProjects\\_57_funcioSuma\\Proj_nevera2\\DadesProductes\\FitxerProductes.cvs";
+
+
     private String nom;
-    private int preu;
+    private double preu;
     private String descripcio;
-    private Date data;
+    private String data;
 
     public Producte() {
 
     }
 
-    public Producte(String nom, int preu, String descripcio, Date data) {
+    public Producte(String nom, double preu, String descripcio, String data) {
         this.nom = nom;
         this.preu = preu;
         this.descripcio = descripcio;
         this.data = data;
+    }
+
+    public Producte(String nom, Double preu, String descripcio, String data) {
     }
 
     public String toString() {
@@ -34,8 +38,10 @@ public class Producte {
     }
 
     public void guardarProducteFitxer() throws IOException {
-        f.escriuFitxerText(fitxer, this.toString(), true);
+        f.escriuObjecteFitxer(this,arxiu,true);
     }
+
+
 
     public static String llegirFitxer(File fitxer) {
         String contingut = "";
@@ -58,29 +64,12 @@ public class Producte {
 
     public void mostrarProducte() throws IOException {
         String text = toString();
-        text = llegirFitxer(new File(fitxer));
+        text = llegirFitxer(new File(fitxerCsv));
 
         String[] parts = text.split(";");
 
         for (String part : parts) {
             System.out.print(part + " ");
         }
-    }
-    public static String[] cercarProducteNom(String fitxer ) {
-        String Producte[];
-        int cont = 0;
-        System.out.println("diga'm el nom");
-        String nomProdBuscar = scan.nextLine();
-        String nomProducte[] = new String[]{llegirFitxer(new File(fitxer))};
-        for (int i = 0; i < cont; i++) {
-            if (nomProdBuscar.equals(nomProducte[0])) {
-                System.out.println("s'ha trobat el producte" + nomProdBuscar);
-                cont++;
-            }else {
-                System.out.println("no s'ha tobat el producte");
-            }
-        }
-
-        return nomProducte;
     }
 }
