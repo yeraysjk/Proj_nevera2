@@ -46,10 +46,9 @@ public class HelloController {
     /**
      * Escriure binari.
      *
-     * @param actionEvent the action event
      */
-    public void escriureBinari(ActionEvent actionEvent) throws IOException {
-        String nom =producte_entrada.getText();
+    public void escriureBinari() throws IOException {
+        String nom =nom_entrada.getText();
         Double preu= Double.valueOf(preu_entrada.getText());
         String descripcio=descripcio_entrada.getText();
         String data= String.valueOf(data_entrada.getValue());

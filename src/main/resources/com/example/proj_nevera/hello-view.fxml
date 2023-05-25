@@ -51,25 +51,25 @@
                      <Text layoutX="269.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descripció" wrappingWidth="72.38309669494629" />
                      <Text layoutX="269.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data" wrappingWidth="59.58310890197754" />
                      <Line endX="-100.19999694824219" endY="-55.00001907348633" layoutX="347.0" layoutY="59.0" startX="-100.19999694824219" startY="132.1999969482422" />
-                     <Button layoutX="554.0" layoutY="65.0" mnemonicParsing="false" onAction="#btCerca" text="CERCA " textFill="#850c69" />
-                     <Button layoutX="98.0" layoutY="146.0" mnemonicParsing="false" onAction="#btTreu" text="TREU" />
+                     <Button layoutX="554.0" layoutY="65.0" mnemonicParsing="false" text="CERCA " textFill="#850c69" />
+                     <Button layoutX="98.0" layoutY="146.0" mnemonicParsing="false" text="TREU" />
                      <TextField layoutX="32.0" layoutY="21.0" prefHeight="110.0" prefWidth="180.0" style="-fx-background-color: yellow;" />
-                     <Button layoutX="32.0" layoutY="202.0" mnemonicParsing="false" onAction="#btPrimer" prefHeight="25.0" prefWidth="35.0" text="&lt;&lt;">
+                     <Button layoutX="32.0" layoutY="202.0" mnemonicParsing="false"  prefHeight="25.0" prefWidth="35.0" text="&lt;&lt;">
                         <font>
                            <Font size="10.0" />
                         </font>
                      </Button>
-                     <Button layoutX="78.0" layoutY="202.0" mnemonicParsing="false" onAction="#btAnterior" prefHeight="25.0" prefWidth="35.0" text="&lt;">
+                     <Button layoutX="78.0" layoutY="202.0" mnemonicParsing="false"  prefHeight="25.0" prefWidth="35.0" text="&lt;">
                         <font>
                            <Font size="10.0" />
                         </font>
                      </Button>
-                     <Button layoutX="126.0" layoutY="201.0" mnemonicParsing="false" onAction="#btSeguent" prefHeight="25.0" prefWidth="35.0" text="&gt;">
+                     <Button layoutX="126.0" layoutY="201.0" mnemonicParsing="false"  prefHeight="25.0" prefWidth="35.0" text="&gt;">
                         <font>
                            <Font size="10.0" />
                         </font>
                      </Button>
-                     <Button layoutX="177.0" layoutY="202.0" mnemonicParsing="false" onAction="#btUltim" prefHeight="25.0" prefWidth="35.0" text="&gt;&gt;">
+                     <Button layoutX="177.0" layoutY="202.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" text="&gt;&gt;">
                         <font>
                            <Font size="10.0" />
                         </font>
