@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 
 import java.io.*;
 import java.util.Date;
@@ -37,26 +38,28 @@ public class HelloController {
      */
     public TextField nom_entrada;
 
-    private String input;
-    /**
-     * The File name.
-     */
-    String fileName;
+    public Text mostrar_producte;
 
-    /**
-     * Escriure binari.
-     *
-     */
+    /**-
     public void BTguardar() throws IOException {
         String nom =nom_entrada.getText();
-        Double preu= Double.valueOf(preu_entrada.getText());
+
+        double preu= Double.parseDouble(preu_entrada.getText());
         String descripcio=descripcio_entrada.getText();
         String data= String.valueOf(data_entrada.getValue());
-
+        mostrar_producte.setText(nom+preu+descripcio+data);
         Producte prod=new Producte(nom,preu,descripcio,data);
 
         prod.guardarProducteFitxer();
+
+
     }
+
+    public void cercarProducte{
+
+
+    }
+
     /**
      * The entry point of application.
      *
