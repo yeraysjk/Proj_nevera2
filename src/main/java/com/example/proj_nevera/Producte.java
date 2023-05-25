@@ -3,10 +3,13 @@ package com.example.proj_nevera;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 
-public class Producte {
+public class Producte implements Serializable {
     static Fitxers f = new Fitxers();
     static private String fitxerCsv = "productes.csv";
     static private String arxiu="nevera.dat";
@@ -37,6 +40,11 @@ public class Producte {
 
     public void guardarProducteFitxer() throws IOException {
         f.escriuObjecteFitxer(this,arxiu,true);
+    }
+    public void ProducteLlista() throws ClassNotFoundException {
+        f.retornaFitxerObjecteEnLlista(arxiu);
+
+
     }
 
 
@@ -70,4 +78,23 @@ public class Producte {
             System.out.print(part + " ");
         }
     }
+    private List<Producte> converteixAlProducte(List<Object> lObjectes){
+        List<Producte> productes=new ArrayList<>();
+        Producte prod=new Producte();
+        for(Object obj: lObjectes){
+            prod=(Producte) obj;
+            productes.add(prod);
+        }
+        return productes;
+    }
+    public List<Producte> retornaProductesFitxerBinariEnLlista() throws FileNotFoundException,InterruptedException,ClassNotFoundException{
+        Fitxers f=new Fitxers();
+        List<Object>objs=f.retornaFitxerObjecteEnLlista(arxiu);
+        List<Producte>producte=converteixAlProducte(objs);
+        return producte;
+    }
+
+
+
+
 }

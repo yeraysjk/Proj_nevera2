@@ -8,6 +8,7 @@ import javafx.scene.text.Text;
 
 import java.io.*;
 import java.util.Date;
+import java.util.List;
 
 /**
  * The type Hello controller.
@@ -40,7 +41,9 @@ public class HelloController {
 
     public Text mostrar_producte;
 
-    /**-
+    public TextField nom_buscar;
+
+
     public void BTguardar() throws IOException {
         String nom =nom_entrada.getText();
 
@@ -51,25 +54,22 @@ public class HelloController {
         Producte prod=new Producte(nom,preu,descripcio,data);
 
         prod.guardarProducteFitxer();
+    }
+
+    public void cercarProducte() throws ClassNotFoundException, FileNotFoundException, InterruptedException {
+        String nom=nom_buscar.getText();
+
+        Producte prod=new Producte();
+
+        prod.ProducteLlista();
+        List<Producte>lProductes= prod.retornaProductesFitxerBinariEnLlista();
+
+        }
+
 
 
     }
 
-    public void cercarProducte{
-
-
-    }
-
-    /**
-     * The entry point of application.
-     *
-     * @param args the input arguments
-     */
-    public static void main(String[] args) {
-
-
-        // Código de inicio de la aplicación
-    }
     }
 
 

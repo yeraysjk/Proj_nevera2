@@ -1,0 +1,178 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f75649f23fe, pid=22394, tid=22420
+#
+# JRE version: OpenJDK Runtime Environment Corretto-11.0.16.9.1 (11.0.16.1+9) (build 11.0.16.1+9-LTS)
+# Java VM: OpenJDK 64-Bit Server VM Corretto-11.0.16.9.1 (11.0.16.1+9-LTS, mixed mode, tiered, compressed oops, g1 gc, linux-amd64)
+# Problematic frame:
+# C  [libGLdispatch.so.0+0x403fe]
+#
+# Core dump will be written. Default location: Core dumps may be processed with "/usr/share/apport/apport -p%p -s%s -c%c -d%d -P%P -u%u -g%g -- %E" (or dumping to /home/infot/Documents/NEVERA DEFINITIVO/core.22394)
+#
+# If you would like to submit a bug report, please visit:
+#   https://github.com/corretto/corretto-11/issues/
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: --add-modules=javafx.controls,javafx.fxml --module-path=/home/infot/Documents/NEVERA DEFINITIVO/build/libs/Proj_nevera-1.0.jar:/home/infot/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-params/5.8.1/13afdb5d414cbe991fce3ef6b864de77c9644dae/junit-jupiter-params-5.8.1.jar:/home/infot/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-engine/5.8.1/21b86e08aae2720bbf017703669948be96d1388c/junit-jupiter-engine-5.8.1.jar:/home/infot/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.8.1/6538b88eb8bf8811bc7b6efb5246f835c15e0bfe/junit-jupiter-api-5.8.1.jar:/home/infot/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.8.1/e6c63bf990dc88a6527b4ed617b23e47048f07e0/junit-platform-engine-1.8.1.jar:/home/infot/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.8.1/1e362cbe6d0f225b066757865e233972557484/junit-platform-commons-1.8.1.jar:/home/infot/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter/5.8.1/73a218cf02d36d4e87bb9697fdbe0780e92b6bd3/junit-jupiter-5.8.1.jar:/home/infot/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.2.0/28c11eb91f9b6d8e200631d46e20a7f407f2a046/opentest4j-1.2.0.jar:/home/infot/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-fxml/17.0.2/1c65c10f9656d7d6c1424d4711cc56a9ee99220d/javafx-fxml-17.0.2-linux.jar:/home/infot/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-controls/17.0.2/c39c919f987496f86f04babacf2dd27d2bdb263e/javafx-controls-17.0.2-linux.jar:/home/infot/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-graphics/17.0.2/ac7e322130657d7ac694d1aa32799d32c02a12c9/javafx-graphics-17.0.2-linux.jar:/home/infot/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-base/17.0.2/710e894e37e7027340e9697d29a11e024d3bd7ae/javafx-base-17.0.2-linux.jar --patch-module=com.example.proj_nevera=/home/infot/Documents/NEVERA DEFINITIVO/build/resources/main -agentlib:jdwp=transport=dt_socket,server=n,suspend=y,address=127.0.0.1:44865 -Dfile.encoding=UTF-8 -Duser.country=ES -Duser.language=ca -Duser.variant -Djdk.module.main=com.example.proj_nevera com.example.proj_nevera/com.example.proj_nevera.HelloApplication
+
+Host: Intel(R) Core(TM) i5-6500 CPU @ 3.20GHz, 4 cores, 7G, Ubuntu 20.04.4 LTS
+Time: Thu May 25 19:36:26 2023 CEST elapsed time: 31.884844 seconds (0d 0h 0m 31s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f758c37e800):  JavaThread "QuantumRenderer-0" daemon [_thread_in_native, id=22420, stack(0x00007f7564dde000,0x00007f7564edf000)]
+
+Stack: [0x00007f7564dde000,0x00007f7564edf000],  sp=0x00007f7564edd300,  free space=1020k
+Native frames: (J=compiled Java code, A=aot compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libGLdispatch.so.0+0x403fe]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  com.sun.prism.es2.X11GLContext.nMakeCurrent(JJ)V+0 javafx.graphics
+j  com.sun.prism.es2.X11GLContext.makeCurrent(Lcom/sun/prism/es2/GLDrawable;)V+8 javafx.graphics
+j  com.sun.prism.es2.ES2Context.makeCurrent(Lcom/sun/prism/es2/GLDrawable;)V+22 javafx.graphics
+j  com.sun.prism.es2.ES2SwapChain.createGraphics()Lcom/sun/prism/es2/ES2Graphics;+50 javafx.graphics
+j  com.sun.prism.es2.ES2SwapChain.createGraphics()Lcom/sun/prism/Graphics;+1 javafx.graphics
+j  com.sun.javafx.tk.quantum.PresentingPainter.run()V+304 javafx.graphics
+j  java.util.concurrent.Executors$RunnableAdapter.call()Ljava/lang/Object;+4 java.base@11.0.16.1
+j  java.util.concurrent.FutureTask.runAndReset()Z+44 java.base@11.0.16.1
+j  com.sun.javafx.tk.RenderJob.run()V+1 javafx.graphics
+j  java.util.concurrent.ThreadPoolExecutor.runWorker(Ljava/util/concurrent/ThreadPoolExecutor$Worker;)V+92 java.base@11.0.16.1
+j  java.util.concurrent.ThreadPoolExecutor$Worker.run()V+5 java.base@11.0.16.1
+j  com.sun.javafx.tk.quantum.QuantumRenderer$PipelineRunnable.run()V+8 javafx.graphics
+j  java.lang.Thread.run()V+11 java.base@11.0.16.1
+v  ~StubRoutines::call_stub
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x0000000000000018
+
+Register to memory mapping:
+
+RAX=0x0000000000000d06 is an unknown value
+RBX=0x0 is NULL
+RCX=0x0000000000000001 is an unknown value
+RDX=0x0000000000000001 is an unknown value
+RSP=0x00007f7564edd300 is pointing into the stack for thread: 0x00007f758c37e800
+RBP=0x00007f751c11fb10 points into unknown readable memory: 0x00007f751c96af90 | 90 af 96 1c 75 7f 00 00
+RSI=0x0 is NULL
+RDI=0x0 is NULL
+R8 =0x00007f751c11fb10 points into unknown readable memory: 0x00007f751c96af90 | 90 af 96 1c 75 7f 00 00
+R9 =0x0000000000000020 is an unknown value
+R10=0x0000000000000007 is an unknown value
+R11=0x0 is NULL
+R12=0x0 is NULL
+R13=0x0 is NULL
+R14=0x00007f751c8eb3a0 points into unknown readable memory: 0x0000000000000000 | 00 00 00 00 00 00 00 00
+R15=0x00007f7564a691e0: <offset 0x00000000000b71e0> in /lib/x86_64-linux-gnu/libGLdispatch.so.0 at 0x00007f75649b2000
+
+
+Registers:
+RAX=0x0000000000000d06, RBX=0x0000000000000000, RCX=0x0000000000000001, RDX=0x0000000000000001
+RSP=0x00007f7564edd300, RBP=0x00007f751c11fb10, RSI=0x0000000000000000, RDI=0x0000000000000000
+R8 =0x00007f751c11fb10, R9 =0x0000000000000020, R10=0x0000000000000007, R11=0x0000000000000000
+R12=0x0000000000000000, R13=0x0000000000000000, R14=0x00007f751c8eb3a0, R15=0x00007f7564a691e0
+RIP=0x00007f75649f23fe, EFLAGS=0x0000000000010206, CSGSFS=0x002b000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007f7564edd300)
+0x00007f7564edd300:   0000000000000000 00007f751c11fb10
+0x00007f7564edd310:   0000000000000000 0000000000000000
+0x00007f7564edd320:   00007f751c8eb3a0 00007f75649f2e1d
+0x00007f7564edd330:   0000000000000000 00007f751c059780 
+
+Instructions: (pc=0x00007f75649f23fe)
+0x00007f75649f22fe:   96 ed 06 00 e8 29 fe ff ff e8 64 ff ff ff c6 05
+0x00007f75649f230e:   ad ed 06 00 01 5d c3 0f 1f 00 c3 0f 1f 80 00 00
+0x00007f75649f231e:   00 00 f3 0f 1e fa e9 77 ff ff ff 0f 1f 80 00 00
+0x00007f75649f232e:   00 00 f3 0f 1e fa c3 66 66 2e 0f 1f 84 00 00 00
+0x00007f75649f233e:   00 00 48 85 ff 0f 84 87 00 00 00 53 48 89 fb bf
+0x00007f75649f234e:   50 00 00 00 e8 19 fe ff ff 48 85 c0 74 6c 48 8b
+0x00007f75649f235e:   53 30 f3 0f 6f 03 c6 40 3c 00 48 8d 35 e1 ed 06
+0x00007f75649f236e:   00 44 8b 05 2e ed 06 00 48 8b 0d d3 ed 06 00 f3
+0x00007f75649f237e:   0f 6f 4b 10 f3 0f 6f 53 20 48 89 50 30 41 8d 50
+0x00007f75649f238e:   01 48 83 05 b1 ed 06 00 01 89 15 07 ed 06 00 48
+0x00007f75649f239e:   8d 50 40 44 89 40 38 0f 11 00 0f 11 48 10 0f 11
+0x00007f75649f23ae:   50 20 48 89 15 99 ed 06 00 48 89 51 08 48 89 48
+0x00007f75649f23be:   40 48 89 70 48 44 89 c0 5b c3 41 b8 ff ff ff ff
+0x00007f75649f23ce:   eb f3 41 83 c8 ff 44 89 c0 c3 0f 1f 84 00 00 00
+0x00007f75649f23de:   00 00 8b 05 22 ed 06 00 41 56 41 55 41 54 55 53
+0x00007f75649f23ee:   85 c0 0f 84 b1 00 00 00 48 89 fb e8 12 0f 00 00
+0x00007f75649f23fe:   4c 8b 63 18 89 c5 4d 85 e4 74 53 4c 63 73 04 4c
+0x00007f75649f240e:   8d 2d 1c ff ff ff 44 39 f5 7e 32 0f 1f 80 00 00
+0x00007f75649f241e:   00 00 44 89 f7 e8 d8 0e 00 00 48 89 c7 48 85 c0
+0x00007f75649f242e:   74 58 48 8b 73 10 ff 53 08 48 85 c0 49 0f 44 c5
+0x00007f75649f243e:   4b 89 04 f4 49 83 c6 01 44 39 f5 7f d5 89 6b 04
+0x00007f75649f244e:   b8 01 00 00 00 5b 5d 41 5c 41 5d 41 5e c3 e8 0f
+0x00007f75649f245e:   0e 00 00 bf 01 00 00 00 89 c6 48 c1 e6 03 e8 8f
+0x00007f75649f246e:   fd ff ff 48 89 43 18 49 89 c4 48 85 c0 75 8c 31
+0x00007f75649f247e:   c0 eb d2 0f 1f 80 00 00 00 00 48 8d 0d 61 ed 03
+0x00007f75649f248e:   00 ba ff 00 00 00 48 8d 35 65 eb 03 00 48 8d 3d
+0x00007f75649f249e:   d1 eb 03 00 e8 b9 fc ff ff 48 8d 0d 42 ed 03 00
+0x00007f75649f24ae:   ba ec 00 00 00 48 8d 35 46 eb 03 00 48 8d 3d 9c
+0x00007f75649f24be:   eb 03 00 e8 9a fc ff ff 66 2e 0f 1f 84 00 00 00
+0x00007f75649f24ce:   00 00 41 54 41 89 f4 55 48 8d 2d 03 6d 07 00 53
+0x00007f75649f24de:   48 89 fb 48 8d 3d f8 eb 06 00 ff 55 30 c7 05 13
+0x00007f75649f24ee:   ec 06 00 01 00 00 00 48 85 db 74 46 48 8b 7b 10 
+
+
+Stack slot to memory mapping:
+stack at sp + 0 slots: 0x0 is NULL
+stack at sp + 1 slots: 0x00007f751c11fb10 points into unknown readable memory: 0x00007f751c96af90 | 90 af 96 1c 75 7f 00 00
+stack at sp + 2 slots: 0x0 is NULL
+stack at sp + 3 slots: 0x0 is NULL
+stack at sp + 4 slots: 0x00007f751c8eb3a0 points into unknown readable memory: 0x0000000000000000 | 00 00 00 00 00 00 00 00
+stack at sp + 5 slots: 0x00007f75649f2e1d: __glDispatchMakeCurrent+0x000000000000008d in /lib/x86_64-linux-gnu/libGLdispatch.so.0 at 0x00007f75649b2000
+stack at sp + 6 slots: 0x0 is NULL
+stack at sp + 7 slots: 0x00007f751c059780 points into unknown readable memory: 0x0000000000000000 | 00 00 00 00 00 00 00 00
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007f7510004530, length=20, elements={
+0x00007f758c02a800, 0x00007f758c157000, 0x00007f758c15b800, 0x00007f758c170800,
+0x00007f758c172800, 0x00007f758c174800, 0x00007f758c176800, 0x00007f758c178800,
+0x00007f758c1c5800, 0x00007f758c2c0000, 0x00007f758c2c3800, 0x00007f758c37e800,
+0x00007f758c528000, 0x00007f758c542000, 0x00007f758c835800, 0x00007f74f8fb2000,
+0x00007f751c8a2000, 0x00007f7544009800, 0x00007f7510001800, 0x00007f7510003000
+}
+
+Java Threads: ( => current thread )
+  0x00007f758c02a800 JavaThread "main" [_thread_blocked, id=22395, stack(0x00007f7592f21000,0x00007f7593022000)]
+  0x00007f758c157000 JavaThread "Reference Handler" daemon [_thread_blocked, id=22402, stack(0x00007f757460e000,0x00007f757470f000)]
+  0x00007f758c15b800 JavaThread "Finalizer" daemon [_thread_blocked, id=22403, stack(0x00007f757450d000,0x00007f757460e000)]
+  0x00007f758c170800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=22405, stack(0x00007f757440c000,0x00007f757450d000)]
+  0x00007f758c172800 JavaThread "Service Thread" daemon [_thread_blocked, id=22406, stack(0x00007f757430b000,0x00007f757440c000)]
+  0x00007f758c174800 JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=22407, stack(0x00007f757420a000,0x00007f757430b000)]
+  0x00007f758c176800 JavaThread "C1 CompilerThread0" daemon [_thread_blocked, id=22408, stack(0x00007f7574109000,0x00007f757420a000)]
+  0x00007f758c178800 JavaThread "Sweeper thread" daemon [_thread_blocked, id=22409, stack(0x00007f7574008000,0x00007f7574109000)]
+  0x00007f758c1c5800 JavaThread "Common-Cleaner" daemon [_thread_blocked, id=22410, stack(0x00007f756c1af000,0x00007f756c2b0000)]
+  0x00007f758c2c0000 JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_in_native, id=22413, stack(0x00007f756c0ae000,0x00007f756c1af000)]
+  0x00007f758c2c3800 JavaThread "JDWP Event Helper Thread" daemon [_thread_blocked, id=22415, stack(0x00007f75650e2000,0x00007f75651e3000)]
+=>0x00007f758c37e800 JavaThread "QuantumRenderer-0" daemon [_thread_in_native, id=22420, stack(0x00007f7564dde000,0x00007f7564edf000)]
+  0x00007f758c528000 JavaThread "InvokeLaterDispatcher" daemon [_thread_blocked, id=22425, stack(0x00007f7514d34000,0x00007f7514e35000)]
+  0x00007f758c542000 JavaThread "JavaFX Application Thread" [_thread_in_native, id=22427, stack(0x00007f7514b31000,0x00007f7514c32000)]
+  0x00007f758c835800 JavaThread "JavaFX-Launcher" [_thread_blocked, id=22432, stack(0x00007f75140c6000,0x00007f75141c7000)]
+  0x00007f74f8fb2000 JavaThread "Prism Font Disposer" daemon [_thread_blocked, id=22435, stack(0x00007f74f5f92000,0x00007f74f6093000)]
+  0x00007f751c8a2000 JavaThread "Cleaner-0" daemon [_thread_blocked, id=22450, stack(0x00007f74f4315000,0x00007f74f4416000)]
+  0x00007f7544009800 JavaThread "SIGTERM handler" daemon [_thread_blocked, id=22477, stack(0x00007f7564fe1000,0x00007f75650e2000)]
+  0x00007f7510001800 JavaThread "Logging-Cleaner" [_thread_blocked, id=22478, stack(0x00007f74d303f000,0x00007f74d3140000)]
+  0x00007f7510003000 JavaThread "Glass/Prism Shutdown Hook" [_thread_blocked, id=22479, stack(0x00007f74d2d3e000,0x00007f74d2e3f000)]
+
+Other Threads:
+  0x00007f758c14f000 VMThread "VM Thread" [stack: 0x00007f7574711000,0x00007f7574811000] [id=22401]
+  0x00007f758c2c7800 WatcherThread [stack: 0x00007f7564ee1000,0x00007f7564fe1000] [id=22419]
+  0x00007f758c042000 GCTaskThread "GC Thread#0" [stack: 0x00007f759217c000,0x00007f759227c000] [id=22396]
+  0x00007f7558001000 GCTaskThread "GC Thread#1" [stack: 0x00007f7514c34000,0x00007f7514d34000] [id=22426]
+  0x00007f7558003800 GCTaskThread "GC Thread#2" [stack: 0x00007f74f5e92000,0x00007f74f5f92000] [id=22443]
+  0x00007f7558005000 GCTaskThread "GC Thread#3" [stack: 0x00007f74f5d90000,0x00007f74f5e90000] [id=22444]
+  0x00007f758c073000 ConcurrentGCThread "G1 Main Marker" [stack: 0x00007f75910b5000,0x00007f75911b5000] [id=22397]
+  0x00007f758c074800 ConcurrentGCThread "G1 Conc#0" [stack: 0x00007f7590fb3000,0x00007f75910b3000] [id=22398]
+  0x00007f758c0ed000 ConcurrentGCThread "G1 Refine#0" [stack: 0x00007f7590aad000,0x00007f7590bad000] [id=22399]
+  0x00007f758c0ee800 ConcurrentGCThread "G1 Young RemSet Sampling" [stack: 0x00007f75909ab000,0x00007f7590aab000] [id=22400]
+
+Threads with active compile tasks:
+C2 CompilerThread0    31902 2900       4 

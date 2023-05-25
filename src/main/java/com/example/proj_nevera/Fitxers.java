@@ -106,4 +106,6 @@ public class Fitxers {
         // Paths --> import java.nio.file.Paths
         return Files.exists(fitxer);    // Files --> import java.nio.file.Files
     }
+
+
 }
