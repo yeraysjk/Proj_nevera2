@@ -29,8 +29,6 @@ public class Producte {
         this.data = data;
     }
 
-    public Producte(String nom, Double preu, String descripcio, String data) {
-    }
 
     public String toString() {
 
