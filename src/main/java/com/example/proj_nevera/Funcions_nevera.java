@@ -1,5 +1,6 @@
 package com.example.proj_nevera;
 import java.io.*;
+import java.util.Scanner;
 
 /**
  * Classe que transforma l'arxiu de text a binari
@@ -7,6 +8,29 @@ import java.io.*;
  * @since x/5/12
  */
 public class Funcions_nevera {
+    static Scanner scan = new Scanner(System.in);
+
+    //metode per demanar dades
+    public static String demanarDades(String dada) {
+        String valor;
+        System.out.println("Introdueix " + dada + ": ");
+        valor = scan.nextLine();
+        return valor; //retorna el valor de la dada que ha preguntat
+    }
+    //metode per guardar les dades del producte
+    public static void guardarProducte() throws IOException {
+        String marca,color;
+        int anyFabricacio;
+        double preu;
+
+        marca = demanarDades("marca");
+        color = demanarDades("color");
+        anyFabricacio = Integer.parseInt(demanarDades("any de fabriccacio"));
+        preu = Double.parseDouble(demanarDades("preu"));
+        Cotxe c = new Cotxe(marca,color,anyFabricacio,preu);
+        c.guardarCotxeFitxer();
+
+    }
 
     /**
      * Escriure binari.
