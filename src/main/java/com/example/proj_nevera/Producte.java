@@ -21,8 +21,24 @@ public class Producte implements Serializable {
     private String descripcio;
     private String data;
 
+    public String getDescripcio() {
+        return descripcio;
+    }
+
+    public String getData() {
+        return data;
+    }
+
     public Producte() {
 
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public double getPreu() {
+        return preu;
     }
 
     public Producte(String nom, double preu, String descripcio, String data) {
