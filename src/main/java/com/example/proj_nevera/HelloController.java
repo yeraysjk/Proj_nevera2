@@ -63,12 +63,15 @@ public class HelloController {
 
         prod.ProducteLlista();
         List<Producte>lProductes= prod.retornaProductesFitxerBinariEnLlista();
+        for (int i = 0; i <lProductes.size(); i++) {
+            if(lProductes.get(1).equals(nom)){
+
+            }
 
         }
 
 
-
-    }
+        }
 
     }
 
