@@ -47,7 +47,7 @@ public class HelloController {
      * Escriure binari.
      *
      */
-    public void escriureBinari() throws IOException {
+    public void BTguardar() throws IOException {
         String nom =nom_entrada.getText();
         Double preu= Double.valueOf(preu_entrada.getText());
         String descripcio=descripcio_entrada.getText();
@@ -57,14 +57,6 @@ public class HelloController {
 
         prod.guardarProducteFitxer();
     }
-    /**
-     * Llegir binari string.
-     *
-     * @param fileName the file name
-     * @return the string
-     */
-
-
     /**
      * The entry point of application.
      *
